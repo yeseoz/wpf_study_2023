@@ -1,0 +1,29 @@
+﻿<Window x:Class="wp03_controls.SubWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wp03_controls"
+        mc:Ignorable="d"
+        Title="SubWindow" Height="400" Width="250">
+    <StackPanel>
+        <!-- 일반적이고 제일 많이 사용하는 방식-->
+        <Grid Height="60" Width="100" Background="LightBlue">
+            <Button Content="버튼"/>
+        </Grid>
+        
+        <!-- 뷰박스(그닥 많이 쓰이지는 않음 -->
+        <Grid Height="60" Width="100" Background="LightBlue">
+            <Viewbox>
+                <Button Content="버튼"/>
+            </Viewbox> <!-- 레이아웃 사이즈 따라서 Viewbox안에 있는 컨트롤의 사이즈가 같이 커지거나 작아짐 -->
+        </Grid>
+
+        <Grid Height="60" Width="100" Background="LightBlue">
+            <Viewbox Stretch="Fill">
+                <!-- 그리드를 꽉 채움 -->
+                <Button Content="버튼"/>
+            </Viewbox>
+        </Grid>
+    </StackPanel>
+</Window>

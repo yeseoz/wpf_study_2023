@@ -1,0 +1,43 @@
+﻿<!-- 페이지는 제목 표시줄이 없고 투명함 부모가 가지고 있는 백그라운드 색을 가짐-->
+    <Page x:Class="wp05_bikeshop.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wp05_bikeshop"
+      mc:Ignorable="d" 
+      d:DesignHeight="480" d:DesignWidth="760"
+      Title="메뉴페이지" Background="Gray">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/> <!-- 반으로 자른다 -->
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="Transparent" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" x:Name="BtnMenuProducts" Content="제품관리" Margin="10" FontSize="20" FontFamily="NanumGothic" />
+            <Button Grid.Column="1" x:Name="BtnMenuSupport" Content="보증관리" Margin="10" FontSize="20" FontFamily="NanumGothic" Click="BtnMenuSupport_Click"/>
+            <Button Grid.Column="2" x:Name="BtnMenuContact" Content="연락관리" Margin="10" FontSize="20" FontFamily="NanumGothic" Click="BtnMenuContact_Click">
+                <Button.Resources> <!-- 버튼 둥글게 만들기 -->
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0" Background="DimGray" Margin="40">
+            <Label Grid.Row ="0" Grid.Column="0" Content="바이크샵 2023" FontSize="45" HorizontalAlignment="Center"
+                   VerticalAlignment="Center" FontWeight="ExtraBold" FontFamily="NanumGothic"/>
+
+        </Grid>
+    </Grid>
+</Page>
