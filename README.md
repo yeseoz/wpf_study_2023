@@ -20,4 +20,4 @@ Windows Presentation Foundation
 
 ## 3일차 
 - WPF 기초
-	- 데이터바인팅 계속
+	- 데이터바인딩 계속
