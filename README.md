@@ -28,3 +28,6 @@ Windows Presentation Foundation
 - WPF 응용
 	- MahApps.Metro 디자인 적용
 	- MVVM패턴
+	
+MVVM View
+<img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MvvmView.png"/>
