@@ -1,0 +1,31 @@
+﻿<!-- mahapps에 들고 있는 윈도우로 바꾸겠다. mah:MetorWindow -->
+<mah:MetroWindow
+    x:Class="wp07_mahApp.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" 
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:local="clr-namespace:wp07_mahApp"
+    mc:Ignorable="d"
+    Title="YouTube" Height="450" Width="800" ResizeMode="NoResize">
+    <!--<mah:MetroWindow.LeftWindowCommands>
+        <mah:WindowCommands>
+            <Button ToolTip="Github sute">
+                <iconPacks:PackIconModern Kind="SocialGithubOctocat" Width="24" Height="24"/> --><!-- IconPacks에서 가져다 쓰기! --><!--
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.LeftWindowCommands>-->
+
+    <mah:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <iconPacks:PackIconModern Kind="YoutubePlay" Width="15" Height="15" Margin="10,7,0,0" Foreground="White"/>
+        </DataTemplate>
+    </mah:MetroWindow.IconTemplate>
+    
+<Grid>
+        <Button Content="일반버튼" HorizontalAlignment="Left" Margin="146,155,0,0" VerticalAlignment="Top" Height="46" Width="89"/>
+
+    </Grid>
+</mah:MetroWindow>
