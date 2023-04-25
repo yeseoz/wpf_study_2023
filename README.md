@@ -36,14 +36,14 @@ MVVM View
 
 
 # 5일차
-WPF 응용
+- WPF 응용
 	- MVVM패턴
 	- MVVM framework / Caliburn
 	- 데이터 바인딩 DB 연동
 	
 	
 ## 6일차
-WPF 응용
+- WPF 응용
 	- API 영화 검색 앱
 		- TMDB OpenAPI
 		- MahApps.Metro
@@ -52,5 +52,6 @@ WPF 응용
 	
 6일차 영화 검색앱
 
-	<img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder.png"/>
+<img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder.png" width="600"/>
+	
 	
