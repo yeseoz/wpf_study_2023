@@ -53,5 +53,18 @@ MVVM View
 6일차 영화 검색앱
 
 <img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder.png" width="600"/>
+
+## 7일차
+- WPF 응용
+	- 영화검색앱
+		- 화면정리
+		- youtube OpenAPI
+		- DB 데이터 바인딩
+		- cefSharp.Wpf
+		
+		
+		
+<img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder1.png" width="600"/>
+<img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder.png" width="600"/>
 	
 	
