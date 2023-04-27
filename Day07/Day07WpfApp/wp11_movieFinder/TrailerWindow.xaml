@@ -8,7 +8,7 @@
         xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         xmlns:local="clr-namespace:wp11_movieFinder"
         mc:Ignorable="d"
-        Title="유튜브 예고편" Height="350" Width="800" FontFamily="NanumGothic" Loaded="MetroWindow_Loaded" Closing="MetroWindow_Closing">
+        Title="유튜브 예고편" Height="350" Width="680" FontFamily="NanumGothic" Loaded="MetroWindow_Loaded" Closing="MetroWindow_Closing">
     <mah:MetroWindow.IconTemplate>
         <DataTemplate>
             <iconPacks:PackIconTypicons Kind="SocialYoutube" Foreground="White" Margin="7,7,0,0"/>

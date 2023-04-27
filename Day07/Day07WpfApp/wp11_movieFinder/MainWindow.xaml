@@ -8,14 +8,14 @@
     xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
     xmlns:local="clr-namespace:wp11_movieFinder"
     mc:Ignorable="d"
-    Title="MovieFinder_2023" Height="462" Width="680" WindowStartupLocation="CenterScreen" FontFamily="NanumGothic Light">
+    Title="MovieFinder_2023" Height="477" Width="680" WindowStartupLocation="CenterScreen" FontFamily="NanumGothic Light">
     <mah:MetroWindow.IconTemplate>
         <DataTemplate>
             <iconPacks:PackIconTypicons Kind="VideoOutline" Foreground="White" Margin="7,7,0,0"/>
         </DataTemplate>
     </mah:MetroWindow.IconTemplate>
 
-    <Grid Margin="10">
+    <Grid Margin="5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="1*"/>
@@ -23,7 +23,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0" Grid.Column="0">
@@ -34,14 +35,17 @@
 
             <!-- 검색창 영역 -->
             <!-- InputMethod 한글 입력을 위한 부분 -->
+
+
             <TextBox Grid.Column="0" x:Name="TxtMovieName" FontSize="13"
                      mah:TextBoxHelper.Watermark="검색할 영화명을 입력하세요"
                      mah:TextBoxHelper.UseFloatingWatermark="True"
-                     mah:TextBoxHelper.ClearTextButton="True" Margin="5,10"
+                     mah:TextBoxHelper.ClearTextButton="True" Margin="5,10,5,10"
                      InputMethod.PreferredImeState="On"
                      InputMethod.PreferredImeConversionMode="Native"
                      FontFamily="NanumGothic"
                      KeyDown="TxtMovieName_KeyDown"/>
+
             <Button Grid.Column="1" x:Name="BtnSearchMovie" FontSize="13" Margin="10,13,26,13"
                     Content="검색" Style="{StaticResource MahApps.Styles.Button.Square.Accent}"
                     FontFamily="NanumGothic" Click="BtnSearchMovie_Click">
@@ -55,9 +59,8 @@
                     </DataTemplate>
                 </Button.ContentTemplate>
             </Button>
-            
-
         </Grid>
+
 
         <!-- 데이타 그리드 영역-->
         <DataGrid Grid.Row="1" Grid.Column="0" x:Name="GrdResult" Margin="5,5,5,5"
@@ -93,8 +96,8 @@
         </Grid>
 
         <!-- 버튼영역 -->
-        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" Margin="5,274,5,0" Grid.RowSpan="2">
-            <Button x:Name="BtnAddFavorite" Content="즐겨찾기 추가" Margin="7,18"
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="70,3" Grid.RowSpan="2">
+            <Button x:Name="BtnAddFavorite" Content="즐겨찾기 추가" Margin="7,10,7,30"
                     FontFamily="NanumGothic" FontSize="13"
                     Style="{StaticResource MahApps.Styles.Button.Square.Accent}" Click="BtnAddFavorite_Click">
                 <Button.ContentTemplate>
@@ -107,9 +110,9 @@
                 </Button.ContentTemplate>
             </Button>
 
-            <Button x:Name="BtnViewFavorite" Content="즐겨찾기 보기" Margin="7,18"
+            <Button x:Name="BtnViewFavorite" Content="즐겨찾기 보기" Margin="7,10,7,30"
                     FontFamily="NanumGothic" FontSize="13"
-                    Style="{StaticResource MahApps.Styles.Button.Square.Highlight}">
+                    Style="{StaticResource MahApps.Styles.Button.Square.Highlight}" Click="BtnViewFavorite_Click">
                 <Button.ContentTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -120,9 +123,9 @@
                 </Button.ContentTemplate>
             </Button>
 
-            <Button x:Name="BtnDelFavorite" Content="즐겨찾기 삭제" Margin="7,18"
+            <Button x:Name="BtnDelFavorite" Content="즐겨찾기 삭제" Margin="7,10,7,30"
                     FontFamily="NanumGothic" FontSize="13"
-                    Style="{StaticResource MahApps.Styles.Button.Square.Accent}">
+                    Style="{StaticResource MahApps.Styles.Button.Square.Accent}" Click="BtnDelFavorite_Click">
                 <Button.ContentTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -133,7 +136,7 @@
                 </Button.ContentTemplate>
             </Button>
 
-            <Button x:Name="BtnWatchTrailer" Content="예고편  보기 " Margin="7,18"
+            <Button x:Name="BtnWatchTrailer" Content="예고편  보기 " Margin="7,10,7,30"
                     FontFamily="NanumGothic" FontSize="14" 
                     Style="{StaticResource MahApps.Styles.Button.Square.Highlight}" Click="BtnWatchTrailer_Click">
                 <Button.ContentTemplate>
@@ -162,6 +165,11 @@
 
 
         </StackPanel>
+        <StatusBar Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" FontFamily="NanumGothic" Margin="-3" Grid.RowSpan="2">
+            <StatusBarItem Content="Tmdb &amp; Youtube OpenAPI App"/>
+            <Separator Style="{StaticResource MahApps.Styles.Separator.StatusBar}"/>
+            <StatusBarItem x:Name="StsResult"/>
+        </StatusBar>
 
     </Grid>
 </mah:MetroWindow>

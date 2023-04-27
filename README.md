@@ -66,5 +66,15 @@ MVVM View
 		
 <img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder1.png" width="600"/>
 <img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder.png" width="600"/>
-	
+
+## 8일차
+- WPF 응용
+	- 영화검색 앱 완료
+		- DB 데이터바인딩(MySQL)
+	- 미세먼지 확인 앱 개발
+		- MahApps.Metro
+		- 데이터포털 OpenAPI
+		- DB데이터 바인딩(MySQL)
+
+<img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder.gif" width="600"/>
 	
