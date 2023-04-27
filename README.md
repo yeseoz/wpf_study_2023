@@ -77,4 +77,16 @@ MVVM View
 		- DB데이터 바인딩(MySQL)
 
 <img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder1.gif" width="600"/>
+
+
+## 9일차 
+- WPF 응용
+	- 미세먼지 확인 앱 완료
+		- MahApps.Metro
+		- 데이터 포털 OpenAPI
+		- DB데이터 바인딩
+	- 개인포트폴리오 개발방법
+		- 데이터 포털 OpenAPI
+		- 네이버, 카카오
+		- 기타 OpenAPI
 	
