@@ -75,10 +75,8 @@ MVVM View
 		- MahApps.Metro
 		- 데이터포털 OpenAPI
 		- DB데이터 바인딩(MySQL)
-
-<img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder1.gif" width="600"/>
-<<<<<<< Updated upstream
-=======
+		
+<img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinderend.gif" width="600"/>
 
 
 ## 9일차 
