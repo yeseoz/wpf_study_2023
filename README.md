@@ -65,7 +65,7 @@ MVVM View
 		
 		
 <img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder1.png" width="600"/>
-<img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder.png" width="600"/>
+<img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder2.png" width="600"/>
 
 ## 8일차
 - WPF 응용
@@ -76,5 +76,5 @@ MVVM View
 		- 데이터포털 OpenAPI
 		- DB데이터 바인딩(MySQL)
 
-<img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder.gif" width="600"/>
+<img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/MovieFinder1.gif" width="600"/>
 	
