@@ -87,8 +87,8 @@ MVVM View
 		- DB데이터 바인딩
 	- 개인포트폴리오 개발방법
 		- 데이터 포털 OpenAPI
-		- 네이버, 카카오
+		- 네이버, 카카오 OpenAPI
 		- 기타 OpenAPI
 
 
-	
+<img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/DustFind.gif" width="600"/>
