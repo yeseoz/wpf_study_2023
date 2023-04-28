@@ -260,14 +260,21 @@ namespace wp12_finedustCheck
             }
         }
 
-        private void GrdResult_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private async void GrdResult_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            var selItem = GrdResult.SelectedItem as DustSensor;
+            if (GrdResult.SelectedItem == null)
+            {
+                await Commons.ShowMessageAsync("오류", "선택된 값이 없습니다");
+            }
+            else
+            {
+                var selItem = GrdResult.SelectedItem as DustSensor;
 
-            var mapWindow = new MapWindow(selItem.Coordy, selItem.Coordx);
-            mapWindow.Owner = this; // MainWindow가 부모
-            mapWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner; // 부모창 중간에 출력
-            mapWindow.ShowDialog();
+                var mapWindow = new MapWindow(selItem.Coordy, selItem.Coordx);
+                mapWindow.Owner = this; // MainWindow가 부모
+                mapWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner; // 부모창 중간에 출력
+                mapWindow.ShowDialog();
+            }
         }
     }
 }
