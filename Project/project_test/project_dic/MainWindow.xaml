@@ -8,16 +8,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:project_dic"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Loaded="MetroWindow_Loaded"
+        Title="사전앱" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="80"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="1" Grid.Column="0">
+        <Grid Grid.Row="0" Margin="0,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="100"/>
@@ -28,15 +29,59 @@
                      mah:TextBoxHelper.UseFloatingWatermark="True"
                      mah:TextBoxHelper.ClearTextButton="True" Margin="30,10,5,10"
                      InputMethod.PreferredImeState="On"
-                     InputMethod.PreferredImeConversionMode="Native"/>
+                     InputMethod.PreferredImeConversionMode="Native"
+                     KeyDown="TxbSearch_KeyDown"/>
             <Button Grid.Column="1" x:Name="BtnSearch" Content="검색"
                     Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}"
-                    Width="70" Height="40" FontSize="13" Margin="5"/>
+                    Width="70" Height="40" FontSize="13" Margin="5,10"
+                    Click="BtnSearch_Click"/>
         </Grid>
 
-        <ListBox Grid.Row="2" x:Name="LsbResult" FontSize="12"
-                />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
 
+            <Grid Grid.Column="0" Margin="5">
+                <GroupBox Header="사진" 
+                      mah:HeaderedControlHelper.HeaderFontSize="14"
+                      mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Center" 
+                      mah:HeaderedControlHelper.HeaderFontFamily="NanumGothic"
+                      mah:HeaderedControlHelper.HeaderFontWeight="Bold" Margin="10" >
+                    <Image x:Name="ImgSearch" Source="noimg.jpg" Margin="10,5"/>
+                </GroupBox>
+            </Grid>
+
+            <DataGrid Grid.Column="1" x:Name="GrdSearch" Margin="10"
+                      IsReadOnly="True" Style="{StaticResource MahApps.Styles.DataGrid.Azure}"
+                      ItemsSource="{Binding}"
+                      AutoGenerateColumns="False"
+                      SelectedCellsChanged="GrdSearch_SelectedCellsChanged"
+                      MouseDoubleClick="GrdSearch_MouseDoubleClick">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Title}" Header="단어" FontFamily="Bold"/>
+                    <DataGridTextColumn Binding="{Binding Description}" Header="결과" FontFamily="Bold"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="삭제" HorizontalAlignment="Right" Width="90" Margin="5"
+            Style="{StaticResource MahApps.Styles.Button.Square.Highlight}"
+            x:Name="BtnDel" Click="BtnDel_Click"/>
+            <Button Content="저장된 단어" HorizontalAlignment="Right" Width="90" Margin="5"
+                Style="{StaticResource MahApps.Styles.Button.Square.Accent}"
+                x:Name="BtnView" Click="BtnView_Click"/>
+            <Button Content="저장" HorizontalAlignment="Right" Width="90" Margin="5"
+                Style="{StaticResource MahApps.Styles.Button.Square.Highlight}"
+                x:Name="BtnSave" Click="BtnSave_Click"/>
+        </StackPanel>
+        <StatusBar Grid.Row="3">
+            <StatusBarItem Content="사전앱" Width="800"/>
+            <Separator Style="{StaticResource MahApps.Styles.Separator.StatusBar}"/>
+            <StatusBarItem x:Name="StsSearch"/>
+        </StatusBar>
 
     </Grid>
 </mah:MetroWindow>

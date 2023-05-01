@@ -221,7 +221,7 @@ namespace wp12_finedustCheck
                             Timestamp = Convert.ToDateTime(sensor["timestamp"]),
                             Company_id = Convert.ToString(sensor["company_id"]),
                             Company_name = Convert.ToString(sensor["company_name"])
-                        }); ;
+                        });
                     }
 
                     this.DataContext = dustSensors;
