@@ -92,3 +92,15 @@ MVVM View
 
 
 <img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/DustFind.gif" width="600"/>
+
+
+## 파이널!
+- NaverApi 이용한 사전앱
+	- MahApps.Metro
+	- MahApps.Metro.IconPacks
+	- cefSharp
+	- 네이버 API
+	- DB데이터 바인딩
+	
+<img src= "https://raw.githubusercontent.com/yeseoz/wpf_study_2023/main/image/NaverSearchApp.gif" width="600"/>
+	

@@ -52,8 +52,8 @@ namespace project_dic
             string query = searchWord; // 검색할 문자열
             string result = string.Empty;
 
-            string apiId = "KI4mvu18Qo6xCGneZwW3";
-            string apiKey = "QowZ9GxS8l";
+            string apiId = "네이버 api 아이디";
+            string apiKey = "네이버 api 비밀번호";
             string url = "https://openapi.naver.com/v1/search/encyc.json?query=" + query; // JSON 결과
             url += "&display=100";
 
